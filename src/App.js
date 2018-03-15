@@ -12,7 +12,7 @@ class App extends Component {
     event.preventDefault();
     var location = encodeURIComponent(this.state.location);
 
-    var urlPrefix = 'http://api.openweathermap.org/data/2.5/weather?q=';
+    var urlPrefix = 'https://api.openweathermap.org/data/2.5/weather?q=';
     var urlSuffix = '&APPID=090331b296060a63c91fc129b8f626c7&units=imperial';
     var url = urlPrefix + location + urlSuffix;
 
