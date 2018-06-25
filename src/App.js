@@ -46,7 +46,7 @@ class App extends Component {
       <h1>Today's Weather</h1>
       <form onSubmit={this.fetchData}>
         <label>Tell me the weather for
-            <input placeholder={"City"} type="text"  onChange={this.changeLocation} />
+            <input placeholder={"Enter a City and State"} type="text"  onChange={this.changeLocation} />
         </label>
       </form>
       <p className="temp-wrapper">
