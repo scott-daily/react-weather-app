@@ -16,12 +16,11 @@ class App extends Component {
     var urlSuffix = '&APPID=090331b296060a63c91fc129b8f626c7&units=imperial';
     var url = urlPrefix + location + urlSuffix;
 
-    var self=this;
 
     xhr({
-      url: url
-    }, function (err, data) {
-      self.setState({
+      url
+    }, (err, data) => {
+      this.setState({
         data: JSON.parse(data.body)
       });
     });
@@ -47,7 +46,7 @@ class App extends Component {
       <h1>Today's Weather</h1>
       <form onSubmit={this.fetchData}>
         <label>Tell me the weather for
-            <input placeholder={"City"} type ="text" value={this.state.location} onChange={this.changeLocation} />
+            <input placeholder={"City"} type="text"  onChange={this.changeLocation} />
         </label>
       </form>
       <p className="temp-wrapper">
